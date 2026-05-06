@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
-
-const WHATSAPP = "https://api.whatsapp.com/send?phone=5551989036374";
+import { useContactDialog } from "./ContactDialog";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { open: openDialog } = useContactDialog();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -44,14 +44,13 @@ export function Header() {
             ))}
           </nav>
 
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openDialog}
             className="hidden md:inline-flex items-center justify-center rounded-md border border-primary-foreground/90 bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground hover:bg-accent-hover transition-colors"
           >
             Quero solicitar um orçamento
-          </a>
+          </button>
 
           <button
             aria-label="Abrir menu"
@@ -80,14 +79,13 @@ export function Header() {
                 {l.label}
               </a>
             ))}
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-md border border-primary-foreground/90 bg-accent px-3 py-2 text-center text-sm font-semibold text-accent-foreground"
+            <button
+              type="button"
+              onClick={() => { setOpen(false); openDialog(); }}
+              className="block w-full rounded-md border border-primary-foreground/90 bg-accent px-3 py-2 text-center text-sm font-semibold text-accent-foreground"
             >
               Quero solicitar um orçamento
-            </a>
+            </button>
           </div>
         )}
       </div>

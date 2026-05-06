@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useContactDialog } from "./ContactDialog";
 
 export const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5551989036374";
 
@@ -12,14 +13,14 @@ export function CtaButton({
   size?: "md" | "lg";
 }) {
   const sizes = size === "lg" ? "px-7 py-4 text-base" : "px-5 py-3 text-sm";
+  const { open } = useContactDialog();
   return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      type="button"
+      onClick={open}
       className={`inline-flex items-center justify-center rounded-md border border-white bg-accent ${sizes} font-semibold text-accent-foreground shadow-md hover:bg-accent-hover transition-colors ${className}`}
     >
       {children}
-    </a>
+    </button>
   );
 }
