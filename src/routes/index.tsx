@@ -1,26 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Types } from "@/components/site/Types";
+import { Services } from "@/components/site/Services";
+import { HowWeWork } from "@/components/site/HowWeWork";
+import { ProjectPhase } from "@/components/site/ProjectPhase";
+import { Installation } from "@/components/site/Installation";
+import { Special } from "@/components/site/Special";
+import { ProjectVideos, InspectionVideos } from "@/components/site/VideoBlock";
+import { Inspections, Anchors, NR35 } from "@/components/site/Inspections";
+import { FinalCta } from "@/components/site/FinalCta";
+import { ContactForm } from "@/components/site/ContactForm";
+import { Footer } from "@/components/site/Footer";
+import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <Hero />
+        <Types />
+        <Services />
+        <HowWeWork />
+        <ProjectPhase />
+        <Installation />
+        <Special />
+        <ProjectVideos />
+        <Inspections />
+        <InspectionVideos />
+        <Anchors />
+        <NR35 />
+        <FinalCta />
+        <ContactForm />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
