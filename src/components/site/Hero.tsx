@@ -22,7 +22,7 @@ export function Hero() {
             Linha de Vida e Sistemas de Proteção Contra Quedas
           </h1>
           <p className="mt-5 text-lg text-primary-foreground/85 max-w-2xl">
-            Projeto, instalação e inspeção de sistemas de segurança para trabalho em altura — garantindo conformidade com normas e proteção total para sua equipe.
+            Projeto, instalação e inspeção de sistemas de segurança para trabalho em altura, garantindo conformidade com normas e proteção total para sua equipe.
           </p>
 
           <ul className="mt-8 space-y-3">
