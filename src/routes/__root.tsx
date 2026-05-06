@@ -32,11 +32,15 @@ export const Route = createRootRoute({
       { title: "Engenhar+ | Linha de Vida e Proteção Contra Quedas no RS" },
       { name: "description", content: "Projeto, instalação e inspeção de Linhas de Vida conforme NR-35. Soluções completas em proteção contra quedas para empresas no RS e Brasil." },
       { name: "author", content: "Engenhar+ Soluções" },
-      { property: "og:title", content: "Engenhar+ | Linha de Vida e Proteção Contra Quedas" },
-      { property: "og:description", content: "Projeto, instalação e inspeção de sistemas de proteção contra quedas conforme NR-35." },
+      { property: "og:title", content: "Engenhar+ | Linha de Vida e Proteção Contra Quedas no RS" },
+      { property: "og:description", content: "Projeto, instalação e inspeção de Linhas de Vida conforme NR-35. Soluções completas em proteção contra quedas para empresas no RS e Brasil." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Engenhar+ | Linha de Vida e Proteção Contra Quedas no RS" },
+      { name: "twitter:description", content: "Projeto, instalação e inspeção de Linhas de Vida conforme NR-35. Soluções completas em proteção contra quedas para empresas no RS e Brasil." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4e6fa083-c7e7-46eb-8749-b2e7bcbf72b8/id-preview-cbf7b973--6c03737c-babe-40ff-ade7-4067c63d62c0.lovable.app-1778086838899.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4e6fa083-c7e7-46eb-8749-b2e7bcbf72b8/id-preview-cbf7b973--6c03737c-babe-40ff-ade7-4067c63d62c0.lovable.app-1778086838899.png" },
     ],
     links: [
       {
