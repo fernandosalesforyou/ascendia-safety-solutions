@@ -13,6 +13,7 @@ import { FinalCta } from "@/components/site/FinalCta";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Footer } from "@/components/site/Footer";
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
+import { ContactDialogProvider } from "@/components/site/ContactDialog";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -20,7 +21,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <ContactDialogProvider>
+      <div className="min-h-screen bg-background">
       <Header />
       <main>
         <Hero />
@@ -40,6 +42,7 @@ function Index() {
       </main>
       <Footer />
       <FloatingWhatsApp />
-    </div>
+      </div>
+    </ContactDialogProvider>
   );
 }
