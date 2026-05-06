@@ -12,7 +12,7 @@ export function HowWeWork() {
       <SectionTitle
         eyebrow="Como a Engenhar+ trabalha"
         title="Como desenvolvemos cada projeto"
-        subtitle="Cada projeto é único. Analisamos o ambiente em detalhes, ouvimos todas as partes envolvidas e desenvolvemos soluções técnicas alinhadas à realidade do cliente — com foco em segurança, eficiência e o melhor custo-benefício."
+        subtitle="Cada projeto é único. Analisamos o ambiente em detalhes, ouvimos todas as partes envolvidas e desenvolvemos soluções técnicas alinhadas à realidade do cliente, com foco em segurança, eficiência e o melhor custo-benefício."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {pillars.map((p, i) => (
