@@ -1,6 +1,8 @@
 import logo from "@/assets/logo.png";
+import { useContactDialog } from "./ContactDialog";
 
 export function Footer() {
+  const { open } = useContactDialog();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
@@ -38,13 +40,9 @@ export function Footer() {
               <li><a href="#home" className="hover:text-accent">Início</a></li>
               <li><a href="#projeto" className="hover:text-accent">Serviços</a></li>
               <li>
-                <a
-                  href="https://api.whatsapp.com/message/Z6377ZQAG5DMN1?autoload=1&app_absent=0"
-                  target="_blank" rel="noopener noreferrer"
-                  className="hover:text-accent"
-                >
+                <button type="button" onClick={open} className="hover:text-accent">
                   Orçamento
-                </a>
+                </button>
               </li>
               <li><a href="#contato" className="hover:text-accent">Sobre nós</a></li>
             </ul>
