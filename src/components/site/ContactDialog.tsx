@@ -18,6 +18,18 @@ function formatPhone(value: string) {
   return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
 }
 
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url?: string) => boolean;
+  }
+}
+
+function reportConversion() {
+  if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
+    window.gtag_report_conversion();
+  }
+}
+
 export function ContactDialogProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -48,6 +60,7 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
       const res = await fetch(WEBHOOK_URL, { method: "POST", body: fd });
       if (!res.ok) throw new Error(`Erro ${res.status}`);
       setDone(true);
+      reportConversion();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Falha ao enviar");
     } finally {
@@ -56,7 +69,7 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <ContactDialogContext.Provider value={{ open: () => { reset(); setIsOpen(true); } }}>
+    <ContactDialogContext.Provider value={{ open: () => { reset(); setIsOpen(true); reportConversion(); } }}>
       {children}
       <Dialog open={isOpen} onOpenChange={(v) => { setIsOpen(v); if (!v) reset(); }}>
         <DialogContent className="sm:max-w-md">
