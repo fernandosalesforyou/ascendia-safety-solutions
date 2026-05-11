@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Section, SectionTitle } from "./Section";
+import { CtaButton } from "./CtaButton";
 import img1 from "@/assets/install-1.jpg";
 import img2 from "@/assets/install-2.jpg";
 import img3 from "@/assets/install-3.jpg";
@@ -70,6 +71,9 @@ export function Installation() {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="mt-12 text-center">
+        <CtaButton size="lg" />
       </div>
     </Section>
   );
