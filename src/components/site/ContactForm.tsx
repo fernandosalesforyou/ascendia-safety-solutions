@@ -7,11 +7,11 @@ export function ContactForm() {
       <div className="mx-auto max-w-3xl text-center">
         <SectionTitle
           eyebrow="Formulário"
-          title="Quer saber mais?"
-          subtitle="Deixe seus dados e nossa equipe entra em contato rapidamente para entender sua necessidade e apresentar a melhor solução."
+          title="Fale com um especialista"
+          subtitle="Receba um diagnóstico técnico para sua empresa."
         />
         <div className="mt-8">
-          <CtaButton size="lg">Solicitar contato</CtaButton>
+          <CtaButton size="lg">Quero solicitar um orçamento</CtaButton>
         </div>
       </div>
     </Section>
