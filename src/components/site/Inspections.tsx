@@ -1,4 +1,5 @@
 import { Section, SectionTitle } from "./Section";
+import { CtaButton } from "./CtaButton";
 
 const diff = ["Inspeção técnica rigorosa", "Atualização conforme normas", "Identificação de falhas e riscos"];
 const scope = ["Linhas de vida", "Pontos de ancoragem"];
@@ -34,6 +35,9 @@ export function Inspections() {
             ))}
           </ul>
         </div>
+      </div>
+      <div className="mt-12 text-center">
+        <CtaButton size="lg" />
       </div>
     </Section>
   );

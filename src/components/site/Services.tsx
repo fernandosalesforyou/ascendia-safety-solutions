@@ -1,4 +1,5 @@
 import { Section, SectionTitle } from "./Section";
+import { CtaButton } from "./CtaButton";
 import tesla from "@/assets/partners/tesla.png";
 import tsea from "@/assets/partners/tsea.png";
 import arcelor from "@/assets/partners/arcelor.png";
@@ -38,6 +39,10 @@ export function Services() {
           </li>
         ))}
       </ul>
+
+      <div className="mt-10 text-center">
+        <CtaButton size="lg" />
+      </div>
 
       <PartnersCarousel />
     </Section>
