@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import salesForYouLogo from "@/assets/sales-for-you.png";
 import { useContactDialog } from "./ContactDialog";
 
 export function Footer() {
@@ -84,9 +85,10 @@ export function Footer() {
           <a
             href="https://salesforyou.com.br/?utm_source=engenharmais.com.br"
             target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-accent"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            Site desenvolvido com ♥ por Sales for You
+            <span>Site desenvolvido com ♥ por</span>
+            <img src={salesForYouLogo} alt="Sales for You" className="h-6 w-auto" />
           </a>
         </div>
       </div>

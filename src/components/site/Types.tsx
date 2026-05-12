@@ -43,7 +43,7 @@ export function Types() {
         ))}
       </div>
       <div className="mt-12 text-center">
-        <CtaButton />
+        <CtaButton size="lg" />
       </div>
     </Section>
   );
