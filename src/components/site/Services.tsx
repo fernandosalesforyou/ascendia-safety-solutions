@@ -11,6 +11,7 @@ import dorfKetal from "@/assets/partners/dorf-ketal.png";
 import unimed from "@/assets/partners/unimed.png";
 import madesa from "@/assets/partners/madesa.png";
 import newPartner from "@/assets/partners/new-partner.png";
+import sap from "@/assets/partners/sap.png";
 
 const services = [
   "Projeto técnico 2D e 3D",
@@ -19,6 +20,11 @@ const services = [
   "Relatórios técnicos e documentação",
   "Avaliação de risco no local",
   "Consultoria especializada",
+  "Manual de montagem",
+  "Plano de manutenção",
+  "Análise do melhor sistema",
+  "Memorial de cálculo",
+  "Memorial descritivo",
 ];
 
 export function Services() {
@@ -60,9 +66,9 @@ function PartnersCarousel() {
     { name: "Trombini", src: trombini },
     { name: "Isla", src: isla },
     { name: "Dorf Ketal", src: dorfKetal },
-    { name: "Unimed Porto Alegre", src: unimed },
     { name: "Madesa", src: madesa },
     { name: "Parceiro", src: newPartner },
+    { name: "SAP", src: sap },
   ];
   const loop = [...items, ...items];
   return (
