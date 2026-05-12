@@ -75,7 +75,7 @@ function PartnersCarousel() {
           {loop.map((p, i) => (
             <div
               key={i}
-              className="flex h-20 w-40 shrink-0 items-center justify-center rounded-lg border border-border bg-card p-3"
+              className="flex h-32 w-60 shrink-0 items-center justify-center rounded-lg border border-border bg-card p-4"
             >
               <img
                 src={p.src}
