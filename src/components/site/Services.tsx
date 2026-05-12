@@ -10,6 +10,7 @@ import isla from "@/assets/partners/isla.png";
 import dorfKetal from "@/assets/partners/dorf-ketal.png";
 import unimed from "@/assets/partners/unimed.png";
 import madesa from "@/assets/partners/madesa.png";
+import newPartner from "@/assets/partners/new-partner.png";
 
 const services = [
   "Projeto técnico 2D e 3D",
@@ -28,19 +29,19 @@ export function Services() {
         title="Solução completa do projeto à execução"
         subtitle="Oferecemos um conjunto completo de serviços técnicos para garantir segurança, conformidade e eficiência."
       />
-      <ul className="mt-12 mx-auto grid gap-3 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl">
+      <ul className="mt-16 mx-auto grid gap-5 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl">
         {services.map((s) => (
           <li
             key={s}
-            className="flex items-start gap-3 rounded-lg bg-card p-4 shadow-sm border border-border"
+            className="flex items-start gap-4 rounded-xl bg-card p-6 shadow-md border border-border hover:shadow-xl hover:-translate-y-0.5 transition-all"
           >
-            <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground text-xs font-bold">✓</span>
-            <span className="text-sm font-medium text-foreground">{s}</span>
+            <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground text-base font-bold">✓</span>
+            <span className="text-base sm:text-lg font-semibold text-foreground leading-snug">{s}</span>
           </li>
         ))}
       </ul>
 
-      <div className="mt-10 text-center">
+      <div className="mt-12 text-center">
         <CtaButton size="lg" />
       </div>
 
@@ -61,11 +62,12 @@ function PartnersCarousel() {
     { name: "Dorf Ketal", src: dorfKetal },
     { name: "Unimed Porto Alegre", src: unimed },
     { name: "Madesa", src: madesa },
+    { name: "Parceiro", src: newPartner },
   ];
   const loop = [...items, ...items];
   return (
     <div className="mt-16">
-      <p className="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+      <p className="text-center text-base font-semibold uppercase tracking-widest text-muted-foreground">
         Alguns de nossos parceiros
       </p>
       <div className="mt-6 overflow-hidden">

@@ -16,7 +16,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="inline-block rounded-full border border-primary-foreground/30 bg-primary-foreground/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary-foreground/90">
-            Engenhar+ Soluções • RS
+            Engenhar+ Soluções
           </p>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground">
             Linha de Vida e Sistemas de Proteção Contra Quedas

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <img src={logo} alt="Engenhar+" className="h-10 w-auto" />
+            <img src={logo} alt="Engenhar+" className="h-16 w-auto" />
             <p className="mt-4 text-sm text-primary-foreground/80">
               Soluções mecânicas para um mundo em constante movimento.
             </p>
@@ -30,6 +30,15 @@ export function Footer() {
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors"
               >
                 <svg viewBox="0 0 32 32" className="h-5 w-5 fill-primary-foreground"><path d="M16 4C9.37 4 4 9.37 4 16c0 2.12.55 4.11 1.52 5.84L4 28l6.34-1.66A11.94 11.94 0 0016 28c6.63 0 12-5.37 12-12S22.63 4 16 4z"/></svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/engenharsolu%C3%A7%C3%B5es/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-primary-foreground"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H7.72V8z"/></svg>
               </a>
             </div>
           </div>
