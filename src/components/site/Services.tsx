@@ -8,7 +8,6 @@ import solistica from "@/assets/partners/solistica.png";
 import trombini from "@/assets/partners/trombini.png";
 import isla from "@/assets/partners/isla.png";
 import dorfKetal from "@/assets/partners/dorf-ketal.png";
-import unimed from "@/assets/partners/unimed.png";
 import madesa from "@/assets/partners/madesa.png";
 import newPartner from "@/assets/partners/new-partner.png";
 import sap from "@/assets/partners/sap.png";
