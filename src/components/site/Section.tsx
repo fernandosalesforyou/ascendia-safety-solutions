@@ -44,11 +44,11 @@ export function SectionTitle({
           {eyebrow}
         </p>
       )}
-      <h2 className={`mt-3 text-3xl sm:text-4xl font-bold ${light ? "text-primary-foreground" : "text-primary"}`}>
+      <h2 className={`mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight ${light ? "text-primary-foreground" : "text-primary"}`}>
         {title}
       </h2>
       {subtitle && (
-        <p className={`mt-4 text-base sm:text-lg ${light ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+        <p className={`mt-5 text-lg sm:text-xl ${light ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
           {subtitle}
         </p>
       )}

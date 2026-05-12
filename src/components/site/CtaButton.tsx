@@ -12,7 +12,7 @@ export function CtaButton({
   className?: string;
   size?: "md" | "lg";
 }) {
-  const sizes = size === "lg" ? "px-7 py-4 text-base" : "px-5 py-3 text-sm";
+  const sizes = size === "lg" ? "px-9 py-5 text-lg" : "px-6 py-3.5 text-base";
   const { open } = useContactDialog();
   return (
     <button
