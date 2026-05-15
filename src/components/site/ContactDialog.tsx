@@ -61,6 +61,7 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
       if (!res.ok) throw new Error(`Erro ${res.status}`);
       setDone(true);
       reportConversion();
+      window.location.href = "https://wa.me/5551989036374?text=Conversar%20com%20Engenhar%20+";
     } catch (err) {
       setError(err instanceof Error ? err.message : "Falha ao enviar");
     } finally {
