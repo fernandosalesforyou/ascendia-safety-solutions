@@ -58,6 +58,46 @@ export const Route = createRootRoute({
         children:
           "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TW7GH5X3');",
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://linhadevida.engenharmais.com.br/#organization",
+              name: "Engenhar+ Soluções",
+              url: "https://linhadevida.engenharmais.com.br",
+              telephone: "+55-51-98903-6374",
+              areaServed: "BR",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://linhadevida.engenharmais.com.br/#website",
+              url: "https://linhadevida.engenharmais.com.br",
+              name: "Engenhar+ | Linha de Vida e Proteção Contra Quedas",
+              publisher: { "@id": "https://linhadevida.engenharmais.com.br/#organization" },
+              inLanguage: "pt-BR",
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://linhadevida.engenharmais.com.br/#localbusiness",
+              name: "Engenhar+ Soluções",
+              image: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4e6fa083-c7e7-46eb-8749-b2e7bcbf72b8/id-preview-cbf7b973--6c03737c-babe-40ff-ade7-4067c63d62c0.lovable.app-1778086838899.png",
+              url: "https://linhadevida.engenharmais.com.br",
+              telephone: "+55-51-98903-6374",
+              priceRange: "$$",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Porto Alegre",
+                addressRegion: "RS",
+                addressCountry: "BR",
+              },
+              areaServed: ["RS", "Brasil"],
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
