@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as TiposLinhaDeVidaRouteImport } from './routes/tipos-linha-de-vida'
 import { Route as SolucoesEspeciaisRouteImport } from './routes/solucoes-especiais'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as PontosDeAncoragemRouteImport } from './routes/pontos-de-ancoragem'
 import { Route as OrcamentoRouteImport } from './routes/orcamento'
@@ -36,6 +37,11 @@ const TiposLinhaDeVidaRoute = TiposLinhaDeVidaRouteImport.update({
 const SolucoesEspeciaisRoute = SolucoesEspeciaisRouteImport.update({
   id: '/solucoes-especiais',
   path: '/solucoes-especiais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicosRoute = ServicosRouteImport.update({
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/orcamento': typeof OrcamentoRoute
   '/pontos-de-ancoragem': typeof PontosDeAncoragemRoute
   '/servicos': typeof ServicosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solucoes-especiais': typeof SolucoesEspeciaisRoute
   '/tipos-linha-de-vida': typeof TiposLinhaDeVidaRoute
   '/videos': typeof VideosRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/orcamento': typeof OrcamentoRoute
   '/pontos-de-ancoragem': typeof PontosDeAncoragemRoute
   '/servicos': typeof ServicosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solucoes-especiais': typeof SolucoesEspeciaisRoute
   '/tipos-linha-de-vida': typeof TiposLinhaDeVidaRoute
   '/videos': typeof VideosRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/orcamento': typeof OrcamentoRoute
   '/pontos-de-ancoragem': typeof PontosDeAncoragemRoute
   '/servicos': typeof ServicosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solucoes-especiais': typeof SolucoesEspeciaisRoute
   '/tipos-linha-de-vida': typeof TiposLinhaDeVidaRoute
   '/videos': typeof VideosRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/orcamento'
     | '/pontos-de-ancoragem'
     | '/servicos'
+    | '/sitemap.xml'
     | '/solucoes-especiais'
     | '/tipos-linha-de-vida'
     | '/videos'
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
     | '/orcamento'
     | '/pontos-de-ancoragem'
     | '/servicos'
+    | '/sitemap.xml'
     | '/solucoes-especiais'
     | '/tipos-linha-de-vida'
     | '/videos'
@@ -178,6 +189,7 @@ export interface FileRouteTypes {
     | '/orcamento'
     | '/pontos-de-ancoragem'
     | '/servicos'
+    | '/sitemap.xml'
     | '/solucoes-especiais'
     | '/tipos-linha-de-vida'
     | '/videos'
@@ -194,6 +206,7 @@ export interface RootRouteChildren {
   OrcamentoRoute: typeof OrcamentoRoute
   PontosDeAncoragemRoute: typeof PontosDeAncoragemRoute
   ServicosRoute: typeof ServicosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolucoesEspeciaisRoute: typeof SolucoesEspeciaisRoute
   TiposLinhaDeVidaRoute: typeof TiposLinhaDeVidaRoute
   VideosRoute: typeof VideosRoute
@@ -220,6 +233,13 @@ declare module '@tanstack/react-router' {
       path: '/solucoes-especiais'
       fullPath: '/solucoes-especiais'
       preLoaderRoute: typeof SolucoesEspeciaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicos': {
@@ -306,6 +326,7 @@ const rootRouteChildren: RootRouteChildren = {
   OrcamentoRoute: OrcamentoRoute,
   PontosDeAncoragemRoute: PontosDeAncoragemRoute,
   ServicosRoute: ServicosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolucoesEspeciaisRoute: SolucoesEspeciaisRoute,
   TiposLinhaDeVidaRoute: TiposLinhaDeVidaRoute,
   VideosRoute: VideosRoute,
