@@ -70,7 +70,7 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <ContactDialogContext.Provider value={{ open: () => { reset(); setIsOpen(true); reportConversion(); } }}>
+    <ContactDialogContext.Provider value={{ open: () => { reset(); setIsOpen(true); } }}>
       {children}
       <Dialog open={isOpen} onOpenChange={(v) => { setIsOpen(v); if (!v) reset(); }}>
         <DialogContent className="sm:max-w-md">
