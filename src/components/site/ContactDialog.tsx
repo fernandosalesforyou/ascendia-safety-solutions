@@ -35,10 +35,10 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [form, setForm] = useState({ nome: "", email: "", telefone: "" });
+  const [form, setForm] = useState({ nome: "", telefone: "" });
 
   function reset() {
-    setForm({ nome: "", email: "", telefone: "" });
+    setForm({ nome: "", telefone: "" });
     setDone(false);
     setError(null);
     setLoading(false);
@@ -53,7 +53,6 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
       const fullPhone = `+55${digits}`;
       const fd = new FormData();
       fd.append("nome", form.nome.trim());
-      fd.append("email", form.email.trim());
       fd.append("telefone", fullPhone);
       fd.append("whatsapp", fullPhone);
       fd.append("origem", "engenharmais.com.br");
@@ -91,7 +90,6 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
           ) : (
             <form onSubmit={onSubmit} className="grid gap-4">
               <Field label="Nome" value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} required />
-              <Field label="E-mail" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
               <div>
                 <label className="text-sm font-medium text-foreground">Telefone (WhatsApp)</label>
                 <div className="mt-1 flex">
