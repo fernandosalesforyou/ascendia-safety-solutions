@@ -38,7 +38,7 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
   const [form, setForm] = useState({ nome: "", telefone: "" });
 
   function reset() {
-    setForm({ nome: "", email: "", telefone: "" });
+    setForm({ nome: "", telefone: "" });
     setDone(false);
     setError(null);
     setLoading(false);
