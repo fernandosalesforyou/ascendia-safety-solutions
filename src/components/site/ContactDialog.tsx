@@ -90,7 +90,6 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
           ) : (
             <form onSubmit={onSubmit} className="grid gap-4">
               <Field label="Nome" value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} required />
-              <Field label="E-mail" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
               <div>
                 <label className="text-sm font-medium text-foreground">Telefone (WhatsApp)</label>
                 <div className="mt-1 flex">
