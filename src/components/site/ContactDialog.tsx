@@ -57,6 +57,8 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
       fd.append("telefone", fullPhone);
       fd.append("whatsapp", fullPhone);
       fd.append("origem", "engenharmais.com.br");
+      fd.append("data_entrada", new Date().toISOString());
+      fd.append("url_pagina", typeof window !== "undefined" ? window.location.href : "");
       const res = await fetch(WEBHOOK_URL, { method: "POST", body: fd });
       if (!res.ok) throw new Error(`Erro ${res.status}`);
       setDone(true);
