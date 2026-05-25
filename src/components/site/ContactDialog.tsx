@@ -53,7 +53,6 @@ export function ContactDialogProvider({ children }: { children: ReactNode }) {
       const fullPhone = `+55${digits}`;
       const fd = new FormData();
       fd.append("nome", form.nome.trim());
-      fd.append("email", form.email.trim());
       fd.append("telefone", fullPhone);
       fd.append("whatsapp", fullPhone);
       fd.append("origem", "engenharmais.com.br");
