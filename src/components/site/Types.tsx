@@ -1,4 +1,3 @@
-import { Section, SectionTitle } from "./Section";
 import { CtaButton } from "./CtaButton";
 
 const items = [
@@ -22,29 +21,38 @@ const items = [
 
 export function Types() {
   return (
-    <Section id="projeto" tone="white">
-      <SectionTitle
-        eyebrow="Tipos de Linha de Vida"
-        title="Soluções completas em sistemas de proteção contra quedas"
-      />
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((it, i) => (
-          <article
-            key={it.title}
-            className="group relative rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
-          >
-            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold">
-              0{i + 1}
-            </div>
-            <h3 className="text-lg font-semibold text-primary">{it.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.text}</p>
-            <div className="mt-4 h-1 w-10 rounded bg-accent group-hover:w-20 transition-all" />
-          </article>
-        ))}
+    <section id="projeto" className="relative isolate overflow-hidden py-24 sm:py-28">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-primary to-primary/90" />
+      <div className="absolute inset-0 -z-10 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, var(--accent), transparent 50%), radial-gradient(circle at 80% 80%, var(--accent), transparent 50%)" }} />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
+            Tipos de Linha de Vida
+          </p>
+          <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight">
+            Soluções completas em sistemas de proteção contra quedas
+          </h2>
+          <div className="mt-6 mx-auto h-1 w-24 rounded bg-accent" />
+        </div>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map((it, i) => (
+            <article
+              key={it.title}
+              className="group relative rounded-2xl bg-card p-7 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent"
+            >
+              <div className="absolute -top-5 left-7 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-accent-foreground font-bold text-lg shadow-lg">
+                0{i + 1}
+              </div>
+              <h3 className="mt-6 text-lg font-bold text-primary">{it.title}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{it.text}</p>
+              <div className="mt-5 h-1 w-10 rounded bg-accent group-hover:w-full transition-all duration-500" />
+            </article>
+          ))}
+        </div>
+        <div className="mt-16 text-center">
+          <CtaButton size="lg" />
+        </div>
       </div>
-      <div className="mt-12 text-center">
-        <CtaButton size="lg" />
-      </div>
-    </Section>
+    </section>
   );
 }
