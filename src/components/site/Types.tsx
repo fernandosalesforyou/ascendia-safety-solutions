@@ -23,7 +23,7 @@ export function Types() {
   return (
     <section id="projeto" className="relative isolate overflow-hidden py-24 sm:py-28">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-primary to-primary/90" />
-      <div className="absolute inset-0 -z-10 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, hsl(var(--accent)/0.4), transparent 50%), radial-gradient(circle at 80% 80%, hsl(var(--accent)/0.3), transparent 50%)" }} />
+      <div className="absolute inset-0 -z-10 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, var(--accent), transparent 50%), radial-gradient(circle at 80% 80%, var(--accent), transparent 50%)" }} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <p className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
