@@ -1,4 +1,3 @@
-import { Section, SectionTitle } from "./Section";
 import { CtaButton } from "./CtaButton";
 
 const items = [
