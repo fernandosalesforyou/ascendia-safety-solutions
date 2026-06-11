@@ -29,6 +29,9 @@ function reportConversion() {
   if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
     window.gtag_report_conversion();
   }
+  if (typeof window !== "undefined" && typeof window.gtag_report_conversion_lead === "function") {
+    window.gtag_report_conversion_lead();
+  }
 }
 
 export function ContactDialogProvider({ children }: { children: ReactNode }) {
