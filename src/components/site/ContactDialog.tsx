@@ -21,12 +21,16 @@ function formatPhone(value: string) {
 declare global {
   interface Window {
     gtag_report_conversion?: (url?: string) => boolean;
+    gtag_report_conversion_lead?: (url?: string) => boolean;
   }
 }
 
 function reportConversion() {
   if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
     window.gtag_report_conversion();
+  }
+  if (typeof window !== "undefined" && typeof window.gtag_report_conversion_lead === "function") {
+    window.gtag_report_conversion_lead();
   }
 }
 
